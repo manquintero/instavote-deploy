@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: instavote
+  namespace: instavote
+spec:
+  gitImplementation: go-git
+  interval: 30s
+  ref:
+    branch: deploy
+  timeout: 1m0s
+  url: https://github.com/manquintero/instavote-deploy.git

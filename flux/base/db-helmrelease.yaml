@@ -1,0 +1,20 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: db
+  namespace: instavote
+spec:
+  chart:
+    spec:
+      chart: postgres
+      sourceRef:
+        kind: HelmRepository
+        name: helm-charts
+  interval: 1m0s
+  targetNamespace: instavote
+  values:
+    service:
+      name: db
+    settings:
+      authMethod: trust

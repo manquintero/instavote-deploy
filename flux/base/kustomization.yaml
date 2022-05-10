@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- db-helmrelease.yaml
+- github-instavote-staging-alert-provider.yaml
+- helm-charts-helmrepository.yaml
+- instavote-gitrepository.yaml
+- redis-staging-alert.yaml
+- redis-staging-kustomization.yaml
+- result-staging-helmrelease.yaml
+- vote-staging-alert.yaml
+- vote-staging-kustomization.yaml
+- worker-staging-alert.yaml
+- worker-staging-kustomization.yaml
