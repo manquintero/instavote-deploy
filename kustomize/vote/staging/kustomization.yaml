@@ -7,7 +7,7 @@ patchesStrategicMerge:
 - service.yaml
 replicas:
   - name: vote
-    count: 3
+    count: 4
 
 commonAnnotations:
   supported-by: support@fluxcd.io
