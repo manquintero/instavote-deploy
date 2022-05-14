@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 - ../base
 patchesStrategicMerge:
+- vote-canary.yaml
 - deployment.yaml
 replicas:
   - name: vote
